@@ -38,6 +38,7 @@ Restart the console to verify all the three command, especially for the `javac` 
   
  1. Could controller be scaned;  
  2. `<url-pattern>/</url-pattern>`  
+ 3. project name should be the `artifactId`, do keep them the same during creating the project
 
 
 
@@ -47,3 +48,4 @@ Restart the console to verify all the three command, especially for the `javac` 
  解决方法：
  加上-DarchetypeCatalog=internal 运行参数，archetype-catalog.xml本地获取。
  对于intellij idea可以再Runner加上参数。
+
