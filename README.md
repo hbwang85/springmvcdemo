@@ -37,4 +37,13 @@ Restart the console to verify all the three command, especially for the `javac` 
 ### No mapping found for HTTP request with URI [] in DispatcherServlet with name
   
  1. Could controller be scaned;  
- 2. `<url-pattern>/</url-pattern>`
+ 2. `<url-pattern>/</url-pattern>`  
+
+
+
+### idea maven mvn archetype:generate 速度缓慢问题  
+
+ 查看debug信息发现，是maven获取archetype-catalog.xml导致。（用游览器打开http://repo1.maven.org/maven2/archetype-catalog.xml，需要等待很长时间才能获取到。）
+ 解决方法：
+ 加上-DarchetypeCatalog=internal 运行参数，archetype-catalog.xml本地获取。
+ 对于intellij idea可以再Runner加上参数。
